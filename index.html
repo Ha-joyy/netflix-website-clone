@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <title>방법: 재차의 | 넷플릭스</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header>
     <div class="header_inner">
       <a href="#none" class="header_logo">
-        <img src="/images/logo.svg" alt="넷플릭스 logo">
+        <img src="/images/logo.png" alt="넷플릭스 logo">
       </a>
       <div class="header_items">
-        <span>무제한으로 즐기는 시리즈와 영화</span>
+        <p>무제한으로 즐기는 시리즈와 영화</p>
         <div class="item_join">
-          <a href="#none">지금 가입하기</a>
+          <a href="#none" class="btn_long_red">지금 가입하기</a>
         </div>
         <div class="item_login">
-          <a href="#none">로그인</a>
+          <a href="#none" class="btn_shot">로그인</a>
         </div>
       </div>
     </div>
@@ -29,38 +30,40 @@
         <!-- 메인 뷰, 정보 영역 -->
         <div class="mainView_wrap">
           <div class="mainView_inner">
-            <div class="move_stillcut">
-              <img src="/images/stillcut.jpg" alt="">
+            <div class="move_stillcut" style="background-image:url(/images/stillcut.jpg);">
+              <!-- <img src="/images/stillcut.jpg" alt=""> -->
             </div>
-            <div class="move_logo">
-              <img src="/images/movi_logo.png" alt="방법: 재차의 로고">
-            </div>
-            <div class="move_info">
-              <h1 class="tit">방법: 재차의</h1>
-              <ul>
-                <li>
-                  <span class="hidden">개봉일</span>
-                  <span>2021</span>
-                </li>
-                <li>
-                  <span class="hidden">관람등급</span>
-                  <span>15+</span>  
-                </li>
-                <li>
-                  <span>총 상영시간</span>
-                  <span>1시간 49분</span>
-                </li>
-                <li>
-                  <span class="hidden">장르</span>
-                  <a href="#none">스릴러</a>
-                </li>
-              </ul>
-              <p class="info-synopsis">
-                드라마 《방법》의 스핀오프 영화. 한 기자가 정체를 알 수 없는 살인 용의자를 추적한다. 용의자는 엄청난 수의 시체 군단을 되살려 살인을 저지르는데.
-              </p>
-              <div class="talent_info">
-                <span class="telent_label">주연 :</span>
-                <span class="telent_list">엄지원, 정지소, 정문성</span>
+            <div class="info_cont">
+              <div class="move_logo">
+                <img src="/images/movi_logo.png" alt="방법: 재차의 로고">
+              </div>
+              <div class="move_info">
+                <h1 class="tit">방법: 재차의</h1>
+                <ul>
+                  <li>
+                    <span class="hidden">개봉일</span>
+                    <span>2021</span>
+                  </li>
+                  <li>
+                    <span class="hidden">관람등급</span>
+                    <span class="border_txt">15+</span>  
+                  </li>
+                  <li>
+                    <span class="hidden">총 상영시간</span>
+                    <span>1시간 49분</span>
+                  </li>
+                  <li>
+                    <span class="hidden">장르</span>
+                    <a href="#none">스릴러</a>
+                  </li>
+                </ul>
+                <p class="synopsis_info">
+                  드라마 《방법》의 스핀오프 영화. 한 기자가 정체를 알 수 없는 살인 용의자를 추적한다. 용의자는 엄청난 수의 시체 군단을 되살려 살인을 저지르는데.
+                </p>
+                <div class="talent_info">
+                  <span class="telent_label">주연 :</span>
+                  <span class="telent_list">엄지원, 정지소, 정문성</span>
+                </div>
               </div>
             </div>
           </div>
@@ -69,10 +72,11 @@
         <!-- 지금가입하기 라벨 -->
         <div class="joinLabel_wrap">
           <div>
+            <svg class="value-prop-logo" focusable="false" viewBox="225 0 552 1000" aria-hidden="true" data-uia="n-logo"><defs><radialGradient id=":r1:-a" r="75%" gradientTransform="matrix(.38 0 .5785 1 .02 0)"><stop offset="60%" stop-opacity=".3"></stop><stop offset="90%" stop-opacity=".05"></stop><stop offset="100%" stop-opacity="0"></stop></radialGradient></defs><path d="M225 0v1000c60-8 138-14 198-17V0H225" fill="#b1060e"></path><path d="M579 0v983c71 3 131 9 198 17V0H579" fill="#b1060e"></path><path d="M225 0v200l198 600V557l151 426c76 3 136 9 203 17V800L579 200v240L423 0H225" fill="url(#:r1:-a)"></path><path d="M225 0l349 983c76 3 136 9 203 17L423 0H225" fill="#e50914"></path></svg>
             <span>5,500원으로 시작하세요</span>
           </div>
           <div>
-            <a href="#none">지금 가입하기</a>
+            <a href="#none" class="btn_long_red">지금 가입하기</a>
           </div>
         </div>
       </section>
@@ -84,7 +88,7 @@
             <div class="det_top">
               <dl class="det_item">
                 <dt class="tit">오프라인 시청</dt>
-                <dd class="cont">콘텐츠를 지정해 어디에서나 시청하세요.</dd>
+                <dd class="cont">콘텐츠를 지정해 어디에서나<br>시청하세요.</dd>
               </dl>
               <dl class="det_item">
                 <dt class="tit">장르</dt>
@@ -126,7 +130,7 @@
       </section>
       <section>
         <div class="swiper_wrap">
-          <h2>함께 시청된 콘텐츠</h2>
+          <h2>지금 뜨는 콘텐츠</h2>
           <!-- 스와이퍼 넣을 자리 -->
            <div>스와이퍼 들어갈 자리 입니다.</div>
           <!-- // 스와이퍼 넣을 자리 -->
@@ -156,6 +160,24 @@
           <li><a href="#none">법적 고지</a></li>
           <li><a href="#none">오직 넷플릭스에서</a></li>
         </ul>
+        <div class="footer_lang">
+          <select name="" id="">
+            <option value="1">한국어</option>
+            <option value="2"> English</option>
+          </select>
+        </div>
+        <p>넷플릭스 대한민국</p>
+        <div class="footer_btm">
+          <p>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0161 (수신자 부담)</p>
+          <p>대표: 레지널드 숀 톰프슨</p>
+          <p>이메일 주소: korea@netflix.com</p>
+          <p>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</p>
+          <p>사업자등록번호: 165-87-00119</p>
+          <p>클라우드 호스팅: Amazon Web Services Inc.</p>
+          <p>
+            <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1658700119">공정거래위원회 웹사이트</a>
+          </p>
+        </div>
       </div>
     </div>
   </footer>
