@@ -1,3 +1,4 @@
+// 스와이프 스크립트 
 document.addEventListener("DOMContentLoaded", () => {
   const posterInner = document.querySelector(".poster_inner");
   const prevBtn = document.querySelector(".prevBtn_box button");
@@ -54,4 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     slideAmount = getSlideAmount();
   });
+});
+
+// 로그인관련 스크립트
+const id_box = document.querySelector(".box_id");
+const id_label = document.querySelector(".box_id label");
+
+const pw_box = document.querySelector(".box_pw");
+const pw_label = document.querySelector(".box_pw label");
+
+id_box.addEventListener("click", () => {
+  document.querySelector(".user_id").focus();
+});
+
+id_label.addEventListener("click", () => {
+  document.querySelector(".user_id").focus();
 });
