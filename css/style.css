@@ -93,11 +93,12 @@ h1 + .login_inner {padding-top:12px;}
 .login_wrap {margin:auto;padding:48px 64px;max-width:450px;width:100%;background-color:#181818;opacity:0.9;}
 .login_wrap h1 {font-size:32px;color:#fff;}
 .login_wrap [class^="box_"] {margin-top:16px;position:relative;}
-.login_wrap [class^="box_"] label {position:absolute;top:18px;left:18px;color:rgba(255, 255, 255, 0.7);}
+.login_wrap [class^="box_"] label {position:absolute;top:18px;left:18px;color:rgba(255, 255, 255, 0.7);transition:all 0.4s;}
 .login_wrap [class^="box_"] input {display:block;padding:24px 16px 10px;width:100%;outline:none;background-color:transparent;border:1px solid #777;border-radius:4px;color:#fff;}
-.error_txt {margin-top:10px;font-size:13px;color:#eb3942;}
-
-.user_id.active + label{ width:100%;transform:translateY(-8px);font-size:11px; } 
+.error_txt {display:none;margin-top:10px;font-size:13px;color:#eb3942;}
+.error_input {border:1px solid #eb3942 !important;}
+.user_id + label.active,
+.user_pw + label.active{ width:100%;transform:translateY(-8px);font-size:11px;} 
 
 
 

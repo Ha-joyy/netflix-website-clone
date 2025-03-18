@@ -65,16 +65,66 @@ document.addEventListener("DOMContentLoaded", () => {
 // ---  로그인관련 스크립트 ---
 // -----------------------
 
-const id_box = document.querySelector(".box_id");
-const id_label = document.querySelector(".box_id label");
+const box_id = document.querySelector(".box_id");
+const userIdInput = document.querySelector(".user_id");
+const id_label = box_id.querySelector("label");
+const idErrorText = document.querySelector(".box_id + .error_txt")
 
-const pw_box = document.querySelector(".box_pw");
-const pw_label = document.querySelector(".box_pw label");
+const box_pw = document.querySelector(".box_pw");
+const userPwInput = document.querySelector(".user_pw");
+const pw_label = box_pw.querySelector("label");
+const pwErrorText = document.querySelector(".box_pw + .error_txt")
 
-id_box.addEventListener("click", () => {
-  document.querySelector(".user_id").focus();
+// 아이디입력 영역 스크립트
+document.querySelectorAll(".id_label, .box_id").forEach((el) => {
+  el.addEventListener("click", () => {
+    userIdInput.focus();
+  });
 });
 
-id_label.addEventListener("click", () => {
-  document.querySelector(".user_id").focus();
+function handleFocusBlur1(e) {
+  if (e.type === "focus") {
+    id_label.classList.add("active");
+  } else if (e.type === "blur") {
+    if (userIdInput.value.trim() === "" || userIdInput.value.length <= 4) {
+      idErrorText.style.display = "block";  // 에러 문구 보이기
+      userIdInput.classList.add("error_input");
+
+    } else {
+      idErrorText.style.display = "none";   // 에러 문구 숨기기
+      userIdInput.classList.remove("error_input");
+    }
+    id_label.classList.remove("active");
+  }
+}
+
+userIdInput.addEventListener("focus", handleFocusBlur1);
+userIdInput.addEventListener("blur", handleFocusBlur1);
+
+
+
+// 패스워드입력 영역 스크립트
+document.querySelectorAll(".pw_label, .box_pw").forEach((el) => {
+  el.addEventListener("click", () => {
+    userPwInput.focus();
+  });
 });
+
+function handleFocusBlur2(e) {
+  if (e.type === "focus") {
+    pw_label.classList.add("active");
+  } else if (e.type === "blur") {
+    if (userPwInput.value.trim() === "" || userPwInput.value.length <= 4) {
+      pwErrorText.style.display = "block";  // 에러 문구 보이기
+      userPwInput.classList.add("error_input");
+
+    } else {
+      pwErrorText.style.display = "none";   // 에러 문구 숨기기
+      userPwInput.classList.remove("error_input");
+    }
+    pw_label.classList.remove("active");
+  }
+}
+
+userPwInput.addEventListener("focus", handleFocusBlur2);
+userPwInput.addEventListener("blur", handleFocusBlur2);
