@@ -1,4 +1,7 @@
-// 스와이프 스크립트 
+// -----------------------
+// ---  스와이프 스크립트 ----
+// -----------------------
+
 document.addEventListener("DOMContentLoaded", () => {
   const posterInner = document.querySelector(".poster_inner");
   const prevBtn = document.querySelector(".prevBtn_box button");
@@ -10,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 처음엔 이전 버튼 숨김
   prevBtn.classList.add("hidden");
 
-  // ⭐ 슬라이드 거리 계산 함수 (항상 최신 값 유지)
+  // 슬라이드 거리 계산 함수 (항상 최신 값 유지)
   function getSlideAmount() {
     const itemWidth = firstItem.offsetWidth;
     return itemWidth + 14;
@@ -57,7 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 로그인관련 스크립트
+
+// -----------------------
+// ---  로그인관련 스크립트 ---
+// -----------------------
+
 const id_box = document.querySelector(".box_id");
 const id_label = document.querySelector(".box_id label");
 
