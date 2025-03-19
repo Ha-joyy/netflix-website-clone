@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".nextBtn_box button");
   const firstItem = posterInner.querySelector("li");
 
-  let slideAmount = getSlideAmount();
+  const slideAmount = getSlideAmount();
 
   // 처음엔 이전 버튼 숨김
   prevBtn.classList.add("hidden");
