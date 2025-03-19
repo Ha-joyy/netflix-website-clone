@@ -84,17 +84,23 @@ document.querySelectorAll(".id_label, .box_id").forEach((el) => {
 
 function handleFocusBlur1(e) {
   if (e.type === "focus") {
+    // 포커스 받으면 항상 active 추가
     id_label.classList.add("active");
   } else if (e.type === "blur") {
+    // 에러 조건 처리
     if (userIdInput.value.trim() === "" || userIdInput.value.length <= 4) {
       idErrorText.style.display = "block";  // 에러 문구 보이기
       userIdInput.classList.add("error_input");
-
     } else {
       idErrorText.style.display = "none";   // 에러 문구 숨기기
       userIdInput.classList.remove("error_input");
     }
-    id_label.classList.remove("active");
+    // input에 1글자라도 있으면 active 유지, 없으면 제거
+    if (userIdInput.value.trim().length >= 1) {
+      id_label.classList.add("active");
+    } else {
+      id_label.classList.remove("active");
+    }
   }
 }
 
@@ -117,14 +123,59 @@ function handleFocusBlur2(e) {
     if (userPwInput.value.trim() === "" || userPwInput.value.length <= 4) {
       pwErrorText.style.display = "block";  // 에러 문구 보이기
       userPwInput.classList.add("error_input");
-
     } else {
       pwErrorText.style.display = "none";   // 에러 문구 숨기기
       userPwInput.classList.remove("error_input");
     }
-    pw_label.classList.remove("active");
+    // input에 1글자라도 있으면 active 유지, 없으면 제거
+    if (userPwInput.value.trim().length >= 1) {
+      pw_label.classList.add("active");
+    } else {
+      pw_label.classList.remove("active");
+    }
   }
 }
 
 userPwInput.addEventListener("focus", handleFocusBlur2);
 userPwInput.addEventListener("blur", handleFocusBlur2);
+
+
+const pwShowHideEl = document.querySelector(".psw_show_hide");
+
+const pwShowHideBtn = () => {
+  if (userPwInput.value.trim().length >= 1) {
+    pwShowHideEl.style.display = "block";
+  } else {
+    pwShowHideEl.style.display = "none";
+  }
+}
+userPwInput.addEventListener("input", pwShowHideBtn);
+
+// 비밀번호 show, hide
+pwShowHideEl.addEventListener("click", () => {
+  if (userPwInput.type !== "text") {
+    userPwInput.type = "text";
+    pwShowHideEl.querySelector("span").textContent = "비밀번호 숨기기";
+  } else {
+    userPwInput.type = "password";
+    pwShowHideEl.querySelector("span").textContent = "비밀번호 보기";
+  }
+});
+
+// 코드 사용하기, 비밀번호 사용하기 버튼 클릭 이벤트
+const codeChangeBtn = document.querySelector(".code_change_btn");
+const pwChangeBtn = document.querySelector(".pw_change_btn");
+
+function blockChange() {
+  codeChangeBtn.addEventListener("click", () => {
+    document.querySelector(".code_login_wrap").style.display = "block";
+    document.querySelector(".id_login_wrap").style.display = "none";
+    console.log(1);
+  });
+  pwChangeBtn.addEventListener("click", () => {
+    document.querySelector(".id_login_wrap").style.display = "block";
+    document.querySelector(".code_login_wrap").style.display = "none";
+    console.log(2);
+  });
+}
+blockChange();
