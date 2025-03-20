@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <title>Netflix</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/javascript.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/javascript.js"></script>
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
   <header class="login_header">
     <div class="header_inner">
-      <a href="#none" class="header_logo">
-        <img src="images/logo.png" alt="넷플릭스 logo">
+      <a href="./index.html" class="header_logo">
+        <img src="./images/logo.png" alt="넷플릭스 logo">
       </a>
     </div>
   </header>
@@ -24,8 +24,8 @@
           <h1>로그인</h1>
           <form action="" class="login_inner">
             <div class="box_id">
-              <input type="text" class="user_id">
-              <label for="">
+              <input type="text" class="user_id" id="userId">
+              <label for="userId">
                 <span>이메일 주소 또는 휴대폰 번호</span>
               </label>
               <p class="error_txt">정확한 이메일 주소나 전화번호를 입력하세요.</p>
@@ -46,8 +46,8 @@
             </div>
             <div class="id_login_wrap">
               <div class="box_pw">
-                <input type="password" class="user_pw">
-                <label for="">
+                <input type="password" class="user_pw" id="userPw">
+                <label for="userPw">
                   <span>비밀번호</span>
                 </label>
   
@@ -69,8 +69,8 @@
             </div>
             <div class="login_info_save">
               <div class="check_box">
-                <input type="checkbox">
-                <label for="">로그인 정보 저장</label>
+                <input type="checkbox" id="infoSaveCheck">
+                <label for="infoSaveCheck">로그인 정보 저장</label>
               </div>
               <div class="join_info_txt">
                 <p>넷플릭스 회원이 아닌가요? <a href="#none">지금 가입하세요.</a></p>
@@ -98,7 +98,7 @@
           <li><a href="#none">회사 정보</a></li>
         </ul>
         <div class="footer_lang">
-          <select name="" id="">
+          <select name="" id="langSelect">
             <option value="1">한국어</option>
             <option value="2"> English</option>
           </select>

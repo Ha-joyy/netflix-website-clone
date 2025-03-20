@@ -156,9 +156,12 @@ pwShowHideEl.addEventListener("click", () => {
   if (userPwInput.type !== "text") {
     userPwInput.type = "text";
     pwShowHideEl.querySelector("span").textContent = "비밀번호 숨기기";
+    pwShowHideEl.style.backgroundImage = "url('../images/eye-off-outline.svg')";
   } else {
     userPwInput.type = "password";
     pwShowHideEl.querySelector("span").textContent = "비밀번호 보기";
+    pwShowHideEl.style.backgroundImage = "url('../images/eye-outline.svg')";
+
   }
 });
 
@@ -179,3 +182,8 @@ function blockChange() {
   });
 }
 blockChange();
+
+// 한글입력 방지
+// function blockKorean(userIdInput) {
+//   userIdInput.value = userIdInput.value.replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
+// }
