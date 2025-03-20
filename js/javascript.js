@@ -156,11 +156,11 @@ pwShowHideEl.addEventListener("click", () => {
   if (userPwInput.type !== "text") {
     userPwInput.type = "text";
     pwShowHideEl.querySelector("span").textContent = "비밀번호 숨기기";
-    pwShowHideEl.style.backgroundImage = "url('../images/eye-off-outline.svg')";
+    pwShowHideEl.style.backgroundImage = "url('./images/eye-off-outline.svg')";
   } else {
     userPwInput.type = "password";
     pwShowHideEl.querySelector("span").textContent = "비밀번호 보기";
-    pwShowHideEl.style.backgroundImage = "url('../images/eye-outline.svg')";
+    pwShowHideEl.style.backgroundImage = "url('./images/eye-outline.svg')";
 
   }
 });
