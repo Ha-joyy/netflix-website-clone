@@ -102,7 +102,7 @@ h1 + .login_inner {padding-top:12px;}
 .login_wrap .error_input {border:1px solid #eb3942 !important;}
 .login_wrap .user_id + label.active,
 .login_wrap .user_pw + label.active{ width:100%;transform:translateY(-8px);font-size:11px;} 
-.login_wrap .psw_show_hide {display:none;position:absolute;top:15px;right:14px;width:20px;height:20px;background:url(../images/eye-outline.svg) no-repeat center;}
+.login_wrap .psw_show_hide {display:none;position:absolute;top:15px;right:14px;width:20px;height:20px;background-image:url(../images/eye-outline.svg);background-repeat:no-repeat;background-position:center;}
 
 .login_wrap [class^="btn_long_"] {width:100%;height:40px;line-height:40px;border-radius:4px;font-size:16px;}
 .login_wrap .btn_long_red + p {margin:16px 0;text-align:center;color:rgba(255, 255, 255, 0.7);}
